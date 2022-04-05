@@ -238,16 +238,16 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.icon-antenna::before {
+.antenna-icon::before {
   background-image: url(../images/antenna.svg);
 }
-.icon-clock::before {
+.clock-icon::before {
   background-image: url(../images/clock.svg);
 }
-.icon-diagram::before {
+.diagram-icon::before {
   background-image: url(../images/diagram.svg);
 }
-.icon-astronaut::before {
+.astronaut-icon::before {
   background-image: url(../images/astronaut.svg);
 }
 
