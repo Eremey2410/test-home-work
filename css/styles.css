@@ -281,7 +281,7 @@ border-radius: 4px;
 
 .comand-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 50px;
 
   font-style: normal;
   font-weight: 700;
@@ -293,16 +293,16 @@ border-radius: 4px;
 }
 .comand-list {
   display: flex;
-  margin-top: 50px;
-  margin-bottom: 0;
+  margin:-15px;
   padding-left: 0;
 
   text-align: center;
 }
 
-.comand-item + .comand-item {
-  margin-left: 30px;
+.comand-item {
+  margin: 15px;
 }
+
 .comand-item {
   background: #ffffff;
 
