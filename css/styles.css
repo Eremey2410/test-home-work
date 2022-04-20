@@ -4,6 +4,7 @@
   --accent-color: #2196f3;
   --icon-color: #afb1b8;
   --accent-white-color: #ffffff;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list {
   list-style: none;
@@ -29,6 +30,7 @@ body {
 .header-logotype {
   margin-right: 93px;
   color: #000000;
+  transition: color 250ms var(--timing-function);
 }
 
 .header-logo {
@@ -69,8 +71,23 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .header-nav-item + .header-nav-item {
   margin-left: 50px;
+}
+.underline {
+  color: var(--accent-color);
+}
+.underline::after {
+  position: absolute;
+  bottom: 0;
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 .header-list {
   display: flex;
@@ -87,12 +104,15 @@ body {
   margin-left: 50px;
 }
 .header-nav-link {
+  position: relative;
+  padding: 32px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  transition: color 250ms var(--timing-function);
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -102,6 +122,7 @@ body {
 .header-contact {
   display: flex;
   align-items: center;
+  padding: 7px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -109,6 +130,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
+  transition: color 250ms var(--timing-function);
 }
 .footer-contact {
   font-style: normal;
@@ -117,6 +139,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms var(--timing-function);
 }
 .header-contact:hover,
 .header-contact:focus,
@@ -165,27 +188,6 @@ body {
   letter-spacing: 0.06em;
   cursor: pointer;
   background-color: #2196f3;
-  color: #ffffff;
-}
-/* buttons */
-
-.filter-btn {
-  border: none;
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  letter-spacing: 0.03em;
-  background-color: #f5f4fa;
-  color: #212121;
-  cursor: pointer;
-}
-
-.filter-btn:hover,
-.filter-btn:focus {
-  background-color: var(--accent-color);
   color: #ffffff;
 }
 
@@ -260,11 +262,34 @@ body {
   margin: 0;
   padding: 0;
 }
+.work-item {
+  position: relative;
+}
 .work-item + .work-item {
   margin-left: 30px;
 }
 .work-img {
   display: block;
+}
+.work-text {
+  position: absolute;
+  transform: translateY(-100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 370px;
+  height: 70px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--accent-white-color);
 }
 
 /* section comand */
@@ -349,14 +374,19 @@ body {
   align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 
+  background-color: var(--accent-white-color);
   fill: var(--icon-color);
+  transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 .comand-social-link:hover,
 .comand-social-link:focus {
-  border-radius: 50%;
   background-color: var(--accent-color);
   fill: var(--accent-white-color);
+}
+.comand-social-item {
+  border-radius: 50%;
 }
 .comand-social-item + .comand-social-item {
   margin-left: 10px;
@@ -394,6 +424,7 @@ body {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
+  transition: fill 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -474,6 +505,7 @@ body {
   border-radius: 50%;
 
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--timing-function);
 }
 .social-box-link:hover,
 .social-box-link:focus {
@@ -495,10 +527,6 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.filter-btn {
-  border-radius: 4px;
-  padding: 6px 22px;
-}
 .filter-list {
   display: flex;
   justify-content: center;
@@ -509,9 +537,29 @@ body {
 .filter-item + .filter-item {
   margin-left: 8px;
 }
+.filter-btn {
+  border: none;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  color: #212121;
+  border-radius: 4px;
+  padding: 6px 22px;
+  cursor: pointer;
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+}
 .filter-btn:hover,
-.filter-btn:focus{
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+.filter-btn:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* section progect */
@@ -519,7 +567,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 3 - 30px);
-  margin: 0;
+
   padding: 0;
   margin: -15px;
 }
@@ -531,11 +579,15 @@ body {
 }
 .progect-item {
   margin: 15px;
+  transition: box-shadow 250ms var(--timing-function);
 }
 .progect-item:hover,
-.progect-item:focus{
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.progect-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+
 .progect-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -560,4 +612,28 @@ body {
 }
 .progect-img {
   display: block;
+}
+.progect-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.overlay-text {
+  position: absolute;
+  margin: 0;
+  padding: 63px 24px;
+  width: 370px;
+  height: 294px;
+  background: rgba(33, 150, 243, 0.9);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+.progect-link:hover .overlay-text,
+.progect-link:focus .overlay-text {
+  transform: translateY(-100%);
+  transition: transform 250ms var(--timing-function);
 }
