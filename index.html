@@ -434,12 +434,39 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal ">
+      <div class="modal">
         <button type="button" class="modal-btn" data-modal-close>
           <svg class="modal-btn-icon" width="11px" height="11px">
             <use href="./images/icons.svg#Vector"></use>
           </svg>
         </button>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form">
+          <div class="form-name">
+            <label for="user-name" class="form-field">Имя</label>
+
+            <input type="text" name="user-name" id="user-name" class="form-input" />
+          </div>
+          <div class="form-tel">
+            <label for="user-name" class="form-field">Телефон</label>
+            <input type="tel" name="user-tel" id="user-tel" class="form-input" />
+          </div>
+          <div class="form-mail">
+            <label for="user-name" class="form-field">Почта</label>
+            <input type="email" name="user-mail" id="user-mail" class="form-input" />
+          </div>
+          <div class="form-coment">
+            <label for="feedback" class="form-field">Комментарий</label>
+            <textarea
+              name="feedback"
+              class="form-textarea"
+              placeholder="Введите текст"
+              id="feedback"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="form-btn">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
