@@ -707,7 +707,8 @@ padding-left: 32px;
 }
 .form-input:hover,
 .form-input:focus{
-  border: 1px solid var(--accent-color);
+    border-color:  var(--accent-color);
+
 }
 .form-field {
   display: block;
@@ -731,7 +732,7 @@ padding-left: 32px;
 }
 .form-textarea:hover,
 .form-textarea:focus{
-  border: 1px solid var(--accent-color);
+  border-color:  var(--accent-color);
 }
 .form-btn {
   display: block;
