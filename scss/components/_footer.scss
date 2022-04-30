@@ -1,0 +1,102 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+  &__logotype {
+      @extend %link;
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+  }
+  &__logotype:hover,
+  &__logotype:focus {
+    color: $accent-color;
+  }
+  &__logo {
+    color: $accent-color;
+  }
+  &__contact {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms $timing-function;
+  }
+  &__contact:hover,
+  &__contact:focus {
+    color: $accent-color;
+    fill: currentColor;
+  }
+  &__list {
+      @extend %list;
+    margin: 0;
+    padding-left: 0;
+  }
+  &__item {
+    margin-top: 9px;
+    margin-bottom: 0;
+  }
+  &__general {
+    display: flex;
+  }
+  &__social-box {
+    margin-left: 70px;
+  }
+}
+.footer-adress {
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $accent-white-color;
+}
+.social-box {
+  &__title {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $accent-white-color;
+  }
+  &__list {
+    @extend %list;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  &__item + &__item {
+    margin-left: 10px;
+  }
+  &__link {
+    @extend %link;
+    @include centeredFlex;
+    width: 44px;
+    height: 44px;
+    fill: $accent-white-color;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms $timing-function;
+  }
+  &__link:hover,
+  &__link:focus {
+    border-radius: 50%;
+    background-color: $accent-color;
+    fill: $accent-white-color;
+  }
+}

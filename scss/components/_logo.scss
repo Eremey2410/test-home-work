@@ -1,0 +1,18 @@
+.header__logotype {
+  @extend %link;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-right: 93px;
+  color: #000000;
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.header__logo {
+  color: $accent-color;
+}
