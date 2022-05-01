@@ -2,8 +2,11 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
   &__logotype {
-      @extend %link;
+    @extend %link;
     margin-top: 60px;
     margin-bottom: 0;
     font-family: Raleway;
@@ -21,6 +24,7 @@
     color: $accent-color;
   }
   &__contact {
+    @extend %link;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -35,7 +39,7 @@
     fill: currentColor;
   }
   &__list {
-      @extend %list;
+    @extend %list;
     margin: 0;
     padding-left: 0;
   }
@@ -44,10 +48,16 @@
     margin-bottom: 0;
   }
   &__general {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
   &__social-box {
     margin-left: 70px;
+    @media screen and (max-width: 767px) {
+      margin-top: 60px;
+      margin-left: 0;
+    }
   }
 }
 .footer-adress {
@@ -72,12 +82,19 @@
     text-transform: uppercase;
 
     color: $accent-white-color;
+    @media screen and (max-width: 767px) {
+      margin-top: 0;
+    }
   }
   &__list {
     @extend %list;
     display: flex;
     padding: 0;
     margin: 0;
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+      margin-bottom: 60px;
+    }
   }
   &__item + &__item {
     margin-left: 10px;
@@ -98,5 +115,70 @@
     border-radius: 50%;
     background-color: $accent-color;
     fill: $accent-white-color;
+  }
+}
+.send {
+  margin-left: 93px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $accent-white-color;
+  }
+  &__mail {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    color: #afb1b8;
+    background-color: #2f303a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    @include centeredFlex(inline-flex);
+    width: 200px;
+    height: 50px;
+
+    margin-left: 12px;
+    padding-left: 29px;
+    padding-right: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $accent-white-color;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+  &__icon {
+    margin-left: 10px;
+    margin-right: 28px;
+    fill: currentColor;
+  }
+}
+.sends {
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }

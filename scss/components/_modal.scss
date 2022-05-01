@@ -96,6 +96,7 @@
     border-radius: 4px;
     background-color: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
+    outline: transparent;
   }
   &__input:hover,
   &__input:focus {
@@ -126,6 +127,8 @@
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: transparent;
+
   }
   &__textarea:hover,
   &__textarea:focus {
@@ -167,53 +170,4 @@
     transform: translateY(-50%);
   }
 }
-.send {
-  margin-left: 93px;
-  &__title {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
 
-    color: var(--accent-white-color);
-  }
-  &__mail {
-    width: 358px;
-    height: 50px;
-    padding-left: 16px;
-    color: #afb1b8;
-    background-color: #2f303a;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    cursor: pointer;
-  }
-
-  &__btn {
-    @include centeredFlex(inline-flex);
-    width: 200px;
-    height: 50px;
-
-    margin-left: 12px;
-    padding-left: 29px;
-    padding-right: 0;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: $accent-white-color;
-    background: $accent-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-  }
-  &__icon {
-    margin-left: 10px;
-    margin-right: 28px;
-    fill: currentColor;
-  }
-}

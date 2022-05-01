@@ -21,6 +21,13 @@
     <header class="header">
       <div class="container nav">
         <a class="header__logotype link" href="./"><span class="header__logo">Web</span>Studio</a>
+        <button type="button" class="nav__btn is-open" aria-expanded="false" data-menu-button>
+          <svg class="nav__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./images/icons.svg#menu"></use>
+            <use class="icon-cross" href="./images/icons.svg#Vector"></use>
+          </svg>
+        </button>
+
         <nav class="header-nav">
           <ul class="header-nav__list list">
             <li class="header-nav__item">
@@ -435,14 +442,19 @@
           </div>
           <div class="send">
             <h3 class="send__title">Подпишитесь на рассылку</h3>
-            <input class="send__mail" type="email" name="mail" placeholder="E-mail" />
+            <div class="sends">
+            <form class="send__form">
+              <lable class="send__lable">
+                <input class="send__mail" type="email" name="mail" placeholder="E-mail" />
+              </lable>
+            </form>
 
             <button type="button" class="send__btn">
               Подписаться
               <svg class="send__icon" width="24px" height="24px">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
-            </button>
+            </button></div>
           </div>
         </div>
       </div>
@@ -516,5 +528,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

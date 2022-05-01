@@ -2,14 +2,36 @@
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 94px;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
   &__list {
     @extend %list;
-    display: flex;
     margin: 0;
     padding: 0;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+flex-wrap: wrap;
+margin: -15px;
+    }
+  }
+  &__item{
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+      margin: 15px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    text-align: start;
+
+    }
   }
   &__item + &__item {
-    margin-left: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
   }
   &__thumb {
     text-align: center;
@@ -29,6 +51,9 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $title-text-color;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
   &__text {
     margin-bottom: 0;
