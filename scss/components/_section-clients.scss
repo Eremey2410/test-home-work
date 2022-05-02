@@ -1,6 +1,10 @@
 .clients {
   padding: 94px 0;
+  @media screen and (max-width: 1199px) {
+  padding: 60px 0;
+  }
   &__title {
+    margin-top: 0;
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
@@ -15,7 +19,7 @@
     @include centeredFlex;
     margin: -15px;
     padding: 0;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
 flex-wrap: wrap;
   }
   }
@@ -23,6 +27,9 @@ flex-wrap: wrap;
    margin: 15px;
     flex-basis: calc((100% - 4 * 15px) / 2);
     min-width: 130px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
   }
   &__link {
       @extend %link;

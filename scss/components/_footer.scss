@@ -50,6 +50,10 @@
   &__general {
     @media screen and (min-width: 768px) {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 61px;
+      margin-right: 74px;
     }
   }
   &__social-box {
@@ -57,6 +61,9 @@
     @media screen and (max-width: 767px) {
       margin-top: 60px;
       margin-left: 0;
+    }
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+text-align: center;
     }
   }
 }
@@ -122,6 +129,13 @@
   @media screen and (max-width: 767px) {
     margin-left: 0;
   }
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+    }
   &__title {
     margin-top: 0;
     margin-bottom: 20px;
@@ -132,6 +146,9 @@
     text-transform: uppercase;
 
     color: $accent-white-color;
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+margin-top: 60px;
+    }
   }
   &__mail {
     width: 358px;
@@ -146,6 +163,10 @@
     @media screen and (max-width: 767px) {
       width: 100%;
     }
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+width: 450px;
+    }
+    
   }
 
   &__btn {
@@ -166,10 +187,11 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
       margin-top: 20px;
       margin-left: 0;
     }
+
   }
   &__icon {
     margin-left: 10px;
@@ -180,5 +202,7 @@
 .sends {
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

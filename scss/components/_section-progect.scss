@@ -1,10 +1,13 @@
 .progect {
+  margin-top: 50px;
   &__link {
     @extend %link;
   }
   &__list {
     @extend %list;
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
     flex-wrap: wrap;
     flex-basis: calc(100% / 3 - 30px);
 
@@ -20,13 +23,21 @@
   &__item {
     margin: 15px;
     transition: box-shadow 250ms $timing-function;
+    @media screen and (min-width: 768px) and (max-width:1199px){
+      display: flex;
+      flex-basis: calc((100% - 4 * 15px) / 2);
+    }
   }
   &__item:hover,
   &__item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-
+  &__item + &__item {
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
   &__title {
     margin-top: 0;
     margin-bottom: 0;

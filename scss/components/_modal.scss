@@ -12,20 +12,31 @@
   }
 }
 .modal {
-  &__check {
-    @extend %visually-hidden;
-  }
+   @media screen and (max-width: 1199px) {
+
+  overflow: scroll;
+  width: calc(100% - 15px);
+  max-width: 450px;
+   }
   position: absolute;
   top: 50%;
   left: 50%;
+  // height: 581px;
+max-height: calc(100% - 20px);
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
   padding: 40px;
   background-color: $accent-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+   @media screen and (min-width: 1200px) {
+  width: 528px;
+  height: 581px;
+
+   }
+  &__check {
+    @extend %visually-hidden;
+  }
   &__title {
     margin: 0 0 12px 0;
     font-style: normal;
@@ -39,8 +50,8 @@
   }
   &__check-text {
     @include centeredFlex;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -48,10 +59,24 @@
     letter-spacing: 0.03em;
 
     color: $primary-text-color;
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
   }
-  &__check-text a {
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
     color: $accent-color;
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
   }
+
   &__check-text span {
     width: 16px;
     height: 15px;
@@ -119,6 +144,9 @@
     letter-spacing: 0.01em;
 
     color: $primary-text-color;
+    @media screen and (max-width: 1199px) {
+      margin-top: 10px;
+    }
   }
   &__textarea {
     width: 100%;
@@ -128,7 +156,6 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: transparent;
-
   }
   &__textarea:hover,
   &__textarea:focus {
@@ -158,6 +185,12 @@
   &__btn:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
+  &__check {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 }
 .input {
   &__wrap {
@@ -170,4 +203,3 @@
     transform: translateY(-50%);
   }
 }
-
