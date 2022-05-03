@@ -7,21 +7,34 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 94px 0;
-    @media screen and (max-width: 767px) {
-padding: 60px 0;
-    }
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
   &__list {
     @extend %list;
     @include centeredFlex;
-    margin: -4px;
+    margin-top: 0;
+    margin-bottom: 40px;
     padding-left: 0;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
     @media screen and (max-width: 767px) {
       flex-wrap: wrap;
-justify-content: flex-start;
+      justify-content: flex-start;
     }
   }
-  &__item  {
-    margin: 4px;
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__item:nth-child(-n + 3) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
   }
   &__btn {
     border: none;
