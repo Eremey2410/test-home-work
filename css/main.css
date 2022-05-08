@@ -97,12 +97,6 @@ body {
   padding: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .header__list {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__list {
     -ms-flex-wrap: wrap;
@@ -117,7 +111,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .header__item + .header__item {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 }
 
@@ -142,6 +136,10 @@ body {
 }
 
 .nav__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -154,26 +152,20 @@ body {
   }
 }
 
+.nav__btn .icon-cross {
+  display: none;
+}
+
+.nav__btn.is-open .icon-cross {
+  display: block;
+}
+
+.nav__btn.is-open .icon-menu {
+  display: none;
+}
+
 .nav__btn:hover, .nav__btn:focus {
   fill: #2196f3;
-}
-
-.header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 767px) {
-  .header-nav {
-    display: none;
-  }
 }
 
 .header-nav__list {
@@ -209,6 +201,37 @@ body {
 
 .header-nav__link:hover, .header-nav__link:focus {
   color: #2196f3;
+}
+
+.header-nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .header-nav__menu.is-open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: red;
+  }
 }
 
 .underline {
@@ -265,6 +288,22 @@ body {
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+    padding: 118px 204px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    width: auto;
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .hero {
     background-image: url(../../images/hero-mobile@2x.jpg);
@@ -312,7 +351,7 @@ body {
   color: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .hero__title {
     font-size: 26px;
     line-height: 1.62;
@@ -1490,6 +1529,8 @@ body {
 
 .progect__img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .progect__overlay {
