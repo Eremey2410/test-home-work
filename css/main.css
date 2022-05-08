@@ -57,10 +57,16 @@ body {
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  margin-right: 93px;
+  padding: 24px 0;
   color: #000000;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .header__logotype {
+    margin-right: 93px;
+  }
 }
 
 .header__logotype:hover, .header__logotype:focus {
@@ -72,8 +78,6 @@ body {
 }
 
 .header {
-  position: relative;
-  padding: 25px 0;
   background-color: #ffffff;
   border-bottom: 1px solid #c4c4c4;
 }
@@ -99,9 +103,14 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: 84px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-left: auto;
   }
 }
 
@@ -115,7 +124,14 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__item + .header__item {
+    margin-top: 10px;
+  }
+}
+
 .nav {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,7 +198,6 @@ body {
 
 .header-nav__link {
   position: relative;
-  padding: 32px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -193,9 +208,9 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .header-nav__link {
-    padding: 48px 0;
+    padding: 32px 0;
   }
 }
 
@@ -210,6 +225,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav__menu {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -259,7 +281,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 7px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -269,6 +290,12 @@ body {
   fill: #757575;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contact {
+    padding: 32px 0;
+  }
 }
 
 .header__contact:hover, .header__contact:focus {

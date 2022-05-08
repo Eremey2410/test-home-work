@@ -1,6 +1,6 @@
 .header {
-  position: relative;
-  padding: 25px 0;
+  // position: relative;
+
   background-color: #ffffff;
   border-bottom: 1px solid #c4c4c4;
   @media screen and (max-width: 768px) {
@@ -16,8 +16,9 @@
     padding: 0;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      flex-wrap: wrap;
-      margin-left: 84px;
+      flex-direction: column;
+      align-items: start;
+      margin-left: auto;
     }
   }
   &__icon {
@@ -27,9 +28,13 @@
     @media screen and (min-width: 1200px) {
       margin-left: 30px;
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 10px;
+    }
   }
 }
 .nav {
+  position: relative;
   @include centeredFlex;
   @media screen and (max-width: 767px) {
     justify-content: space-between;
@@ -75,7 +80,10 @@
   &__link {
     @extend %link;
     position: relative;
-    padding: 32px 0;
+    @media screen and (min-width: 768px)  {
+      padding: 32px 0;
+    }
+    
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -83,9 +91,7 @@
     letter-spacing: 0.02em;
     color: $title-text-color;
     transition: color 250ms $timing-function;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      padding: 48px 0;
-    }
+    
   }
   &__link:hover,
   &__link:focus {
@@ -94,6 +100,9 @@
   &__menu {
     display: flex;
     align-items: center;
+    @media screen and (min-width: 768px) {
+      flex-basis: 100%;
+    }
     @media screen and (max-width: 767px) {
       display: none;
       position: absolute;

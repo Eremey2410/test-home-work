@@ -5,7 +5,10 @@
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  margin-right: 93px;
+  padding: 24px 0;
+  @media screen and (min-width: 768px) {
+    margin-right: 93px;
+  }
   color: #000000;
   transition: color 250ms $timing-function;
   &:hover,
