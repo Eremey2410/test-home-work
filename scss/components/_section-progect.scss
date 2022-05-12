@@ -7,14 +7,13 @@
   &__list {
     @extend %list;
     margin-top: 0;
-    @media screen and (min-width: 768px) {
-      display: flex;
-    margin: -15px;
-
-    }
     flex-wrap: wrap;
     flex-basis: calc(100% / 3 - 30px);
     padding: 0;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin: -15px;
+    }
   }
   &__border {
     border: 1px solid #eeeeee;
@@ -91,6 +90,7 @@
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+  transition: transform 250ms $timing-function;
 
   color: $accent-white-color;
 }
