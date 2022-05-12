@@ -1,21 +1,17 @@
 .clients {
-  padding: 94px 0;
-  @media screen and (max-width: 1199px) {
-    padding: 60px 0;
+  @include padding-section(94px, 94px);
+  @include tablet-max {
+    @include padding-section(60px, 60px);
   }
   &__title {
     margin-top: 0;
     margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    @include fonts(700, 36px, 1.16, null);
     text-align: center;
-    letter-spacing: 0.03em;
 
     color: $title-text-color;
-    @media screen and  (max-width: 1199px) {
-      font-size: 28px;
-      line-height: 1.18;
+    @media screen and (max-width: 1199px) {
+      @include fonts(null, 28px, 1.18, null);
       margin-bottom: 30px;
     }
   }
@@ -24,7 +20,7 @@
     @include centeredFlex;
     margin: -15px;
     padding: 0;
-    @media screen and (max-width: 1199px) {
+    @include tablet-max{
       flex-wrap: wrap;
     }
   }
@@ -40,12 +36,12 @@
     @extend %link;
     @include centeredFlex;
     height: 92px;
-
     border: 1px solid $icon-color;
     border-radius: 4px;
+
     fill: $icon-color;
     transition: fill 250ms $timing-function, border 250ms $timing-function;
-    @media screen and (min-width: 1200px) {
+    @include desctop {
       width: 170px;
     }
   }

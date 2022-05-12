@@ -1,8 +1,45 @@
-// @include centeredFlex;
-
-@mixin centeredFlex ($type: flex) {
-    display: $type;
-    justify-content: center;
-    align-items: center;
-    
+@mixin centeredFlex($type: flex) {
+  display: $type;
+  justify-content: center;
+  align-items: center;
+}
+@mixin padding-section($top,$bottom){
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+@mixin fonts($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin mobile-max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet-max {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin tablet-desctop{
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        @content
+    }
+}
+@mixin desctop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }

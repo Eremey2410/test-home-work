@@ -6,9 +6,9 @@
 .filter {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 94px 0;
-  @media screen and (max-width: 1199px) {
-    padding: 60px 0;
+  @include padding-section(94px, 0);
+  @include tablet-max {
+    @include padding-section(60px, 0);
   }
   &__list {
     @extend %list;
@@ -16,13 +16,13 @@
     margin-top: 0;
     margin-bottom: 40px;
     padding-left: 0;
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin-bottom: 30px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desctop {
       margin-bottom: 50px;
     }
-    @media screen and (max-width: 767px) {
+    @include mobile-max {
       flex-wrap: wrap;
       justify-content: flex-start;
     }
@@ -32,24 +32,22 @@
   }
 
   &__item:nth-child(-n + 3) {
-    @media screen and (max-width: 767px) {
+    @include mobile-max {
       margin-bottom: 15px;
     }
   }
   &__btn {
     border: none;
     font-family: inherit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
+    @include fonts(500, 16px, 1.6, null);
     text-align: center;
-    letter-spacing: 0.03em;
-    background-color: #f5f4fa;
-    color: $title-text-color;
     border-radius: 4px;
     padding: 6px 22px;
     cursor: pointer;
+
+    background-color: #f5f4fa;
+    color: $title-text-color;
+
     transition: color 250ms $timing-function, background-color 250ms $timing-function,
       box-shadow 250ms $timing-function;
   }

@@ -22,15 +22,18 @@
 
 body {
   font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
   color: #757575;
   background-color: #ffffff;
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -52,12 +55,11 @@ body {
 }
 
 .header__logotype {
+  padding: 24px 0;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
-  padding: 24px 0;
   color: #000000;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -79,8 +81,8 @@ body {
 
 .header {
   position: relative;
+  border-bottom: 1px solid #ececec;
   background-color: #ffffff;
-  border-bottom: 1px solid #ECECEC;
 }
 
 .header__list {
@@ -252,7 +254,6 @@ body {
 
 .header-nav__link {
   position: relative;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -270,7 +271,6 @@ body {
 
 @media screen and (max-width: 767px) {
   .header-nav__link {
-    font-style: normal;
     font-weight: 500;
     font-size: 40px;
     line-height: 1.18;
@@ -351,13 +351,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -381,7 +377,6 @@ body {
 
 @media screen and (max-width: 767px) {
   .contact__tel {
-    font-style: normal;
     font-weight: 500;
     font-size: 34px;
     line-height: 1.18;
@@ -392,7 +387,6 @@ body {
 
 @media screen and (max-width: 767px) {
   .contact__mail {
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 1.17;
@@ -435,7 +429,8 @@ body {
 }
 
 .hero {
-  padding: 118px 60px;
+  padding-top: 118px;
+  padding-bottom: 60px;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
@@ -456,7 +451,8 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-    padding: 118px 204px;
+    padding-top: 118px;
+    padding-bottom: 204px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-tablet.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
   }
@@ -495,7 +491,6 @@ body {
 .hero__title {
   margin-top: 0;
   margin-bottom: 0;
-  font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -517,7 +512,6 @@ body {
   border: none;
   border-radius: 4px;
   font-family: inherit;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
@@ -540,7 +534,8 @@ body {
 
 @media screen and (max-width: 1199px) {
   .features {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -590,22 +585,20 @@ body {
   text-align: center;
   padding: 25px 0;
   margin-bottom: 30px;
-  background-color: #f5f4fa;
   border-radius: 4px;
+  background-color: #f5f4fa;
 }
 
 .features__title {
   margin: 0;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .features__title {
     text-align: center;
   }
@@ -614,11 +607,8 @@ body {
 .features__text {
   margin-bottom: 0;
   margin-top: 10px;
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 0.03em;
   color: #757575;
 }
 
@@ -697,25 +687,25 @@ body {
 .comand {
   margin-top: 0px;
   margin-bottom: 0;
-  padding: 94px 0 94px 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: #f5f4fa;
 }
 
 @media screen and (max-width: 1199px) {
   .comand {
-    padding: 60px 0 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
 .comand__title {
   margin-top: 0;
   margin-bottom: 50px;
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
   color: #212121;
 }
 
@@ -733,31 +723,26 @@ body {
 
 @media screen and (min-width: 768px) {
   .comand__list {
-    margin: -15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .comand__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: -15px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .comand__item + .comand__item {
     margin-top: 30px;
   }
 }
 
 .comand__item {
+  border-radius: 0px 0px 4px 4px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -782,11 +767,8 @@ body {
 .comand__text {
   margin-top: 0;
   margin-bottom: 10px;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
   color: #757575;
 }
 
@@ -810,11 +792,9 @@ body {
 .comand-title__man {
   margin-top: 0;
   margin-bottom: 10px;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  letter-spacing: 0.03e;
   color: #212121;
 }
 
@@ -864,12 +844,14 @@ body {
 }
 
 .clients {
-  padding: 94px 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 @media screen and (max-width: 1199px) {
   .clients {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -880,7 +862,6 @@ body {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  letter-spacing: 0.03em;
   color: #212121;
 }
 
@@ -975,7 +956,6 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
   color: #ffffff;
 }
 
@@ -988,11 +968,8 @@ body {
 }
 
 .footer__contact {
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1023,6 +1000,9 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1050,38 +1030,29 @@ body {
   }
 }
 
-.footer-adress {
+.footer__adress {
   margin-top: 20px;
   margin-bottom: 0;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 0.03em;
   color: #ffffff;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer-adress__box {
+  .footer__box {
     text-align: center;
   }
 }
 
 .social-box__title {
+  margin-top: 0;
   margin-bottom: 20px;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-@media screen and (max-width: 767px) {
-  .social-box__title {
-    margin-top: 0;
-  }
 }
 
 .social-box__list {
@@ -1117,8 +1088,8 @@ body {
           align-items: center;
   width: 44px;
   height: 44px;
-  fill: #ffffff;
   border-radius: 50%;
+  fill: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1163,7 +1134,6 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -1178,13 +1148,11 @@ body {
   width: 358px;
   height: 50px;
   padding-left: 16px;
-  color: #afb1b8;
-  background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   cursor: pointer;
+  color: #afb1b8;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767px) {
@@ -1200,12 +1168,9 @@ body {
 }
 
 .send__btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1218,13 +1183,13 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
   color: #ffffff;
   background: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1531,12 +1496,14 @@ body {
 .filter {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 94px 0;
+  padding-top: 94px;
+  padding-bottom: 0;
 }
 
 @media screen and (max-width: 1199px) {
   .filter {
-    padding: 60px 0;
+    padding-top: 60px;
+    padding-bottom: 0;
   }
 }
 
@@ -1590,17 +1557,15 @@ body {
 .filter__btn {
   border: none;
   font-family: inherit;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
-  letter-spacing: 0.03em;
-  background-color: #f5f4fa;
-  color: #212121;
   border-radius: 4px;
   padding: 6px 22px;
   cursor: pointer;
+  background-color: #f5f4fa;
+  color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);

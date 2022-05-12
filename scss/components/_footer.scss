@@ -1,8 +1,7 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include padding-section(60px, 60px);
   background-color: #2f303a;
-  @media screen and (max-width: 767px) {
+  @include mobile-max {
     text-align: center;
   }
   &__logotype {
@@ -10,10 +9,7 @@
     margin-top: 60px;
     margin-bottom: 0;
     font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
+    @include fonts(700, 26px, 1.2, null);
     color: #ffffff;
   }
   &__logotype:hover,
@@ -25,11 +21,7 @@
   }
   &__contact {
     @extend %link;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+    @include fonts(null, 14px, 1.7, null);
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms $timing-function;
   }
@@ -48,63 +40,53 @@
     margin-bottom: 0;
   }
   &__general {
-    @media screen and (min-width: 768px) {
+    @include tablet {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: baseline;
     }
-    @media screen and (min-width: 1200px) {
+    @include desctop {
       flex-wrap: nowrap;
     }
   }
   &__social-box {
     margin-left: 70px;
-    @media screen and (max-width: 767px) {
+    @include mobile-max {
       margin-top: 60px;
       margin-left: 0;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet-desctop {
       text-align: center;
     }
   }
-}
-.footer-adress {
-  margin-top: 20px;
-  margin-bottom: 0;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
-  color: $accent-white-color;
+  &__adress {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-style: normal;
+    @include fonts(null, 14px, 1.7, null);
+    color: $accent-white-color;
+  }
   &__box {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet-desctop {
       text-align: center;
     }
   }
 }
 .social-box {
   &__title {
+    margin-top: 0;
     margin-bottom: 20px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include fonts(700, 14px, 1.14, null);
     text-transform: uppercase;
-
     color: $accent-white-color;
-    @media screen and (max-width: 767px) {
-      margin-top: 0;
-    }
   }
   &__list {
     @extend %list;
     display: flex;
     padding: 0;
     margin: 0;
-    @media screen and (max-width: 767px) {
+    @include mobile-max {
       justify-content: center;
       margin-bottom: 60px;
     }
@@ -117,25 +99,26 @@
     @include centeredFlex;
     width: 44px;
     height: 44px;
-    fill: $accent-white-color;
     border-radius: 50%;
 
+    fill: $accent-white-color;
     background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 250ms $timing-function;
   }
   &__link:hover,
   &__link:focus {
     border-radius: 50%;
+
     background-color: $accent-color;
     fill: $accent-white-color;
   }
 }
 .send {
   margin-left: 93px;
-  @media screen and (max-width: 767px) {
+  @include mobile-max {
     margin-left: 0;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @include tablet-desctop {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,14 +128,11 @@
   &__title {
     margin-top: 0;
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include fonts(700, 14px, 1.14, null);
     text-transform: uppercase;
 
     color: $accent-white-color;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet-desctop {
       margin-top: 60px;
     }
   }
@@ -160,39 +140,39 @@
     width: 358px;
     height: 50px;
     padding-left: 16px;
-    color: #afb1b8;
-    background-color: #2f303a;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     cursor: pointer;
-    @media screen and (max-width: 767px) {
+
+    color: #afb1b8;
+    background-color: transparent;
+    @include mobile-max {
       width: 100%;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include tablet-desctop {
       width: 450px;
     }
   }
 
   &__btn {
-    @include centeredFlex(inline-flex);
+    display: flex;
+    align-items: center;
     width: 200px;
     height: 50px;
 
     margin-left: 12px;
     padding-left: 29px;
     padding-right: 0;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: $accent-white-color;
-    background: $accent-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    @include fonts(700, 16px, 1.88, 0.06em);
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    @media screen and (max-width: 1199px) {
+
+    color: $accent-white-color;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    @include tablet-max {
       margin-top: 20px;
       margin-left: 0;
     }
@@ -204,11 +184,11 @@
   }
 }
 .sends {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media screen and (min-width: 1200px) {
+    @include desctop {
       flex-direction: row;
     }
   }
