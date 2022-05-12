@@ -3,39 +3,40 @@
   color: $primary-text-color;
   background-color: $white-color;
 }
-.filter {
+.filter-progect {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 94px;
   padding-bottom: 94px;
-  &__btn {
-    border: none;
-    padding: 6px 22px;
+}
+.filter__btn {
+  border: none;
+  padding: 6px 22px;
 
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: center;
-    letter-spacing: 0.03em;
-    background-color: #f5f4fa;
-    color: #212121;
-    border-radius: 4px;
-    cursor: pointer;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  color: #212121;
+  border-radius: 4px;
+  cursor: pointer;
 
-    &:hover,
-    &:focus {
-      background-color: #2196f3;
-      color: $white-color;
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+    color: $white-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
 
-      transition: background-color 250ms $timing-function, color 250ms $timing-function,
-        box-shadow 250ms $timing-function;
-    }
+    transition: background-color 250ms $timing-function, color 250ms $timing-function,
+      box-shadow 250ms $timing-function;
   }
 }
+
 .filter__list {
   list-style: none;
   display: flex;
