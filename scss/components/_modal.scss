@@ -13,65 +13,50 @@
   }
 }
 .modal {
-   @media screen and (max-width: 1199px) {
-
-  overflow: scroll;
-  width: calc(100% - 15px);
-  max-width: 450px;
-   }
   position: absolute;
   top: 50%;
   left: 50%;
-max-height: calc(100% - 20px);
   transform: translate(-50%, -50%);
+  width: 95vw;
   padding: 40px;
-  background-color: $accent-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-   @media screen and (min-width: 1200px) {
-  width: 528px;
 
-   }
+  background-color: $accent-white-color;
+  @include mobile {
+    width: 450px;
+  }
+  @include desctop {
+    width: 528px;
+  }
   &__check {
     @extend %visually-hidden;
   }
   &__title {
     margin: 0 0 12px 0;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.5;
-
+    @include fonts(700, 20px, 1.5, null);
     text-align: center;
-    letter-spacing: 0.03em;
+
     color: $title-text-color;
   }
   &__check-text {
-    @include centeredFlex;
-  
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    @include fonts(null, 14px, 1.71, null);
 
     color: $primary-text-color;
-    @media screen and (max-width: 1199px) {
+    @include tablet-max {
       font-size: 12px;
       line-height: 1.17;
     }
   }
- 
+
   &__link {
-    
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include fonts(null, 14px, 1.71, null);
+
     color: $accent-color;
-    @media screen and (max-width: 1199px) {
+    @include tablet-max {
       font-size: 12px;
       line-height: 1.17;
     }
@@ -137,14 +122,10 @@ max-height: calc(100% - 20px);
     display: block;
     margin-top: 28px;
     margin-bottom: 4px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include fonts(null, 12px, 1.17, 0.01em);
 
     color: $primary-text-color;
-    @media screen and (max-width: 1199px) {
+    @include tablet-max {
       margin-top: 10px;
     }
   }
@@ -168,18 +149,12 @@ max-height: calc(100% - 20px);
     border: none;
     margin-left: auto;
     margin-right: auto;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-
-    letter-spacing: 0.06em;
+    @include fonts(700, 16px, 1.88, 0.06em);
+    border-radius: 4px;
+    cursor: pointer;
 
     color: $accent-white-color;
     background: #188ce8;
-
-    border-radius: 4px;
-    cursor: pointer;
   }
   &__btn:hover,
   &__btn:focus {

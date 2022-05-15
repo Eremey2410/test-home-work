@@ -1,21 +1,16 @@
 .work {
-  @media screen and (max-width: 1199px) {
+  @include tablet-max {
     display: none;
   }
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include padding-section(94px, 94px);
   &__title {
     margin-top: 0;
     margin-bottom: 50px;
-
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
+    @include fonts(700, 36px, 1.17, null);
+
     color: $title-text-color;
   }
   &__list {
@@ -41,13 +36,10 @@
     margin: 0;
     width: 370px;
     height: 70px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
     text-align: center;
-    letter-spacing: 0.03em;
+    @include fonts(700, 14px, 1.14, null);
     text-transform: uppercase;
+
     background: rgba(47, 48, 58, 0.8);
     color: $accent-white-color;
   }
