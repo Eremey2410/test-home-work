@@ -1538,7 +1538,7 @@ body {
   }
 }
 
-@media screen and (max-width: 388px) {
+@media screen and (max-width: 381px) {
   .filter__item:nth-child(2n) {
     margin-right: 0;
   }
