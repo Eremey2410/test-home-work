@@ -1,7 +1,7 @@
 .footer {
   @include padding-section(60px, 60px);
   background-color: #2f303a;
-  @include mobile-max {
+  @include tablet-max {
     text-align: center;
   }
   &__logotype {
@@ -173,25 +173,18 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     @include tablet-max {
-      
       margin-top: 20px;
       margin-left: 0;
     }
   }
   &__icon {
-
     margin-left: 10px;
     margin-right: 28px;
     fill: currentColor;
   }
 }
 .sends {
-  @include tablet {
+  @include desctop {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include desctop {
-      flex-direction: row;
-    }
   }
 }
