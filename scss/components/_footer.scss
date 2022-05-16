@@ -173,11 +173,13 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     @include tablet-max {
+      
       margin-top: 20px;
       margin-left: 0;
     }
   }
   &__icon {
+
     margin-left: 10px;
     margin-right: 28px;
     fill: currentColor;
